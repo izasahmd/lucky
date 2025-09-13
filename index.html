@@ -1,119 +1,142 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucky Marketing - Wholesale Spice Supplier</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fffaf3;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Marketing | Wholesale Spice Supplier - Salem</title>
+  <meta name="description" content="Lucky Marketing - Wholesale spice supplier in Salem. We provide cumin, fennel, fenugreek, and mustard seeds in bulk (30 kg minimum) with delivery across Tamil Nadu.">
+  <meta name="keywords" content="wholesale spices, cumin supplier, fennel seeds bulk, fenugreek, mustard seeds, Salem Tamil Nadu">
+  <meta name="author" content="Lucky Marketing">
 
-        header {
-            background: #d35400;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-            header h1 {
-                margin: 0;
-                font-size: 32px;
-            }
-
-        .contact-bar {
-            background: #f39c12;
-            padding: 10px;
-            text-align: center;
-            font-size: 16px;
-        }
-
-        section {
-            padding: 30px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        h2 {
-            color: #d35400;
-        }
-
-        ul {
-            line-height: 1.8;
-        }
-
-        .highlight {
-            background: #fef5e7;
-            padding: 15px;
-            border-left: 5px solid #d35400;
-            margin-bottom: 20px;
-        }
-
-        footer {
-            background: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #25D366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-        }
-
-            .whatsapp-button:hover {
-                background: #20b958;
-            }
-    </style>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0;
+      background-color: #f39c12; transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .contact-float {
+      position: fixed; bottom: 1.5rem; right: 1.5rem;
+      display: flex; flex-direction: column; gap: 1rem; z-index: 50;
+    }
+    .contact-btn {
+      width: 56px; height: 56px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: white; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .contact-btn:hover { transform: translateY(-5px) scale(1.1); }
+    .whatsapp-btn { background: #25D366; }
+    .call-btn { background: #f39c12; }
+  </style>
 </head>
-<body>
-    <header>
-        <h1>Lucky Marketing</h1>
-        <p>Wholesale Spice Supplier – Bulk Orders Only</p>
-    </header> <div class="contact-bar">
-        📍 15, Sandaipet Main Road, Shevapet, Salem – 636002 | 📞 90431 66040 | 🚚 Delivery Across Tamil Nadu | Minimum Order: 30 kg
-    </div> <section>
-        <h2>Our Products</h2>
-        <ul>
-            <li><strong>Cumin Seeds (Jeera)</strong> – Direct from Unjha & Rajasthan</li>
-            <li><strong>Fennel Seeds (Saunf)</strong> – Clean, bold & fresh</li>
-            <li><strong>Fenugreek Seeds (Methi)</strong> – Ideal for pickles and Ayurveda</li>
-            <li><strong>Mustard Seeds</strong> – Yellow & black varieties</li>
-        </ul>
-        <div class="highlight">
-            🔔 *We supply only in 30 kg bags – ideal for grocery shops, hotels, and traders.*
-        </div><h2>Why Choose Lucky Marketing?</h2>
-        <ul>
-            <li>✔️ Direct sourcing – No middlemen</li>
-            <li>✔️ Delivery across Tamil Nadu</li>
-            <li>✔️ Competitive wholesale prices</li>
-            <li>✔️ Trusted by 100+ regular business buyers</li>
-        </ul>
+<body class="bg-[#fffaf3] text-gray-800">
 
-        <h2>Delivery & Order Info</h2>
-        <p>We deal in <strong>bulk orders only (30 kg minimum per spice)</strong>. We offer safe, reliable delivery throughout Tamil Nadu. Contact us to get the latest price and arrange delivery to your location.</p>
+  <!-- Header / Nav -->
+  <nav class="fixed w-full bg-[#d35400] text-white z-50 shadow">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">Lucky Marketing</a>
+      <div class="hidden md:flex space-x-6">
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#why" class="nav-link">Why Us</a>
+        <a href="#delivery" class="nav-link">Delivery</a>
+        <a href="#about" class="nav-link">About</a>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-toggle"><i class="fas fa-bars text-2xl"></i></button>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden bg-[#d35400] md:hidden px-6 pb-4 space-y-2">
+      <a href="#products" class="block">Products</a>
+      <a href="#why" class="block">Why Us</a>
+      <a href="#delivery" class="block">Delivery</a>
+      <a href="#about" class="block">About</a>
+    </div>
+  </nav>
 
-        <div class="highlight">
-            📞 Call/WhatsApp: <strong>90431 66040</strong>
-        </div>
+  <!-- Hero -->
+  <header class="bg-[#f39c12] text-white text-center pt-32 pb-16 px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Wholesale Spice Supplier</h1>
+    <p class="text-lg md:text-xl">Bulk Orders Only – Salem Based | Delivery Across Tamil Nadu</p>
+  </header>
 
-        <h2>About Us</h2>
-        <p>Lucky Marketing is a wholesale spice supplier based in Salem. We specialize in cumin, fennel, fenugreek, and mustard seeds. Our focus is on quality, competitive pricing, and timely delivery to help your business grow.</p>
+  <!-- Contact bar -->
+  <div class="bg-[#ffe0b2] text-center py-3 px-6 text-sm md:text-base">
+    📍 <a href="https://maps.google.com/?q=15+Sandaipet+Main+Road+Shevapet+Salem" target="_blank">15, Sandaipet Main Road, Shevapet, Salem – 636002</a> | 
+    📞 <a href="tel:+919043166040">90431 66040</a> | 🚚 Min Order: 30 kg | Tamil Nadu Delivery
+  </div>
 
-    </section> <footer>
-        &copy; 2025 Lucky Marketing | All Rights Reserved | Salem, Tamil Nadu
-    </footer><a class="whatsapp-button" href="https://wa.me/919043166040" target="_blank">📲 Chat on WhatsApp</a>
+  <!-- Products -->
+  <section id="products" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-[#d35400] mb-6">Our Products</h2>
+    <ul class="list-disc pl-6 space-y-3">
+      <li><strong>Cumin Seeds (Jeera)</strong> – Direct from Unjha & Rajasthan</li>
+      <li><strong>Fennel Seeds (Saunf)</strong> – Clean, bold & fresh</li>
+      <li><strong>Fenugreek Seeds (Methi)</strong> – Ideal for pickles and Ayurveda</li>
+      <li><strong>Mustard Seeds</strong> – Yellow & black varieties</li>
+    </ul>
+    <div class="bg-[#fef5e7] border-l-4 border-[#d35400] p-4 mt-6">
+      🔔 We supply only in <strong>30 kg bags</strong> – ideal for grocery shops, hotels, and traders.
+    </div>
+  </section>
 
+  <!-- Why Us -->
+  <section id="why" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-[#d35400] mb-6">Why Choose Lucky Marketing?</h2>
+    <ul class="space-y-3">
+      <li>✔️ Direct sourcing – No middlemen</li>
+      <li>✔️ Delivery across Tamil Nadu</li>
+      <li>✔️ Competitive wholesale prices</li>
+      <li>✔️ Trusted by 100+ regular buyers</li>
+    </ul>
+  </section>
+
+  <!-- Delivery -->
+  <section id="delivery" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-[#d35400] mb-6">Delivery & Order Info</h2>
+    <p>We deal in <strong>bulk orders only (30 kg minimum per spice)</strong>. Safe, reliable delivery across Tamil Nadu. Contact us for today’s rates and delivery arrangements.</p>
+    <div class="bg-[#fef5e7] border-l-4 border-[#d35400] p-4 mt-6">
+      📞 Call/WhatsApp: <strong>90431 66040</strong>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="max-w-5xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-[#d35400] mb-6">About Us</h2>
+    <p>Lucky Marketing is a wholesale spice supplier based in Salem. We specialize in cumin, fennel, fenugreek, and mustard seeds. Our mission: quality products, fair pricing, and timely delivery that helps your business grow.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#333] text-gray-300 py-8 px-6 text-center">
+    <p class="mb-3 font-bold text-white">Lucky Marketing</p>
+    <p class="text-sm">© 2025 Lucky Marketing | All Rights Reserved | Salem, Tamil Nadu</p>
+  </footer>
+
+  <!-- Floating Contact Buttons -->
+  <div class="contact-float">
+    <a href="https://wa.me/919043166040" target="_blank" class="contact-btn whatsapp-btn" aria-label="Chat on WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="tel:+919043166040" class="contact-btn call-btn" aria-label="Call Us">
+      <i class="fas fa-phone"></i>
+    </a>
+  </div>
+
+  <!-- JS: Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-times');
+    });
+  </script>
 </body>
 </html>
